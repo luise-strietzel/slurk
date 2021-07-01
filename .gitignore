@@ -2,6 +2,7 @@ log/
 *__pycache__*
 .DS_Store
 _build
+openapi.json
 
 *.db
 /.idea/
@@ -9,3 +10,4 @@ _build
 env/
 venv/
 /.ipynb_checkpoints/
+
