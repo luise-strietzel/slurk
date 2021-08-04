@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -245,7 +248,7 @@ link. Example:</p>
 <li><code class="docutils literal notranslate"><span class="pre">data.user</span></code>: The user who has sent the message</li>
 <li><code class="docutils literal notranslate"><span class="pre">data.timestamp</span></code>: The timestamp of the message</li>
 <li><code class="docutils literal notranslate"><span class="pre">data.private</span></code>: A boolean value if this was a direct message or visible to the room</li>
-<li><code class="docutils literal notranslate"><span class="pre">data.msg</span></code>: The message string of the sent message if any</li>
+<li><code class="docutils literal notranslate"><span class="pre">data.message</span></code>: The message string of the sent message if any</li>
 </ul>
 </dd>
 </dl>
@@ -255,7 +258,7 @@ link. Example:</p>
 <li><code class="docutils literal notranslate"><span class="pre">data.user</span></code>: The user who has sent the message</li>
 <li><code class="docutils literal notranslate"><span class="pre">data.timestamp</span></code>: The timestamp of the message</li>
 <li><code class="docutils literal notranslate"><span class="pre">data.private</span></code>: A boolean value if this was a direct message or visible to the room</li>
-<li><code class="docutils literal notranslate"><span class="pre">data.image</span></code>: The image url of the sent message if any (Either <code class="docutils literal notranslate"><span class="pre">data.msg</span></code> or <code class="docutils literal notranslate"><span class="pre">data.image</span></code> are available)</li>
+<li><code class="docutils literal notranslate"><span class="pre">data.image</span></code>: The image url of the sent message if any (Either <code class="docutils literal notranslate"><span class="pre">data.message</span></code> or <code class="docutils literal notranslate"><span class="pre">data.image</span></code> are available)</li>
 <li><code class="docutils literal notranslate"><span class="pre">data.width</span></code>: The width of the sent image (available if <code class="docutils literal notranslate"><span class="pre">data.image</span></code> is set)</li>
 <li><code class="docutils literal notranslate"><span class="pre">data.height</span></code>: The height of the sent image (available if <code class="docutils literal notranslate"><span class="pre">data.image</span></code> is set)</li>
 </ul>
