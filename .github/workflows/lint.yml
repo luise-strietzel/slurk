@@ -1,0 +1,58 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - master
+  pull_request_target: # As we don't run any code or install custom dependencies, this is safe to use
+    branches:
+      - master
+
+jobs:
+  Black:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install black
+        run: |
+          python -m pip install --upgrade pip
+          pip install black
+
+      - name: Run black
+        uses: wearerequired/lint-action@v1
+        with:
+          black: true
+          auto_fix: ${{ github.event_name == 'push' }}
+          continue_on_error: ${{ github.event_name != 'push' }}
+          neutral_check_on_warning: true
+
+  Flake8:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install flake8
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+
+      - name: Run flake8
+        uses: wearerequired/lint-action@v1
+        with:
+          flake8: true
+          flake8_args: "--ignore=E501,W503"
+          continue_on_error: false
+          neutral_check_on_warning: true
